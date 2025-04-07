@@ -1,20 +1,92 @@
-<!-- login.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Login</title>
+  <title>Hospital Login</title>
   <style>
-    body { font-family: Arial; display: flex; justify-content: center; align-items: center; height: 100vh; }
-    form { padding: 20px; border: 1px solid #ccc; border-radius: 10px; }
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 24px;
+      color: #333;
+    }
+
+    .login-container label {
+      display: block;
+      margin-bottom: 10px;
+      color: #555;
+      font-weight: 600;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #0072ff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-container button:hover {
+      background-color: #005fd8;
+    }
+
+    .login-container .footer {
+      margin-top: 20px;
+      text-align: center;
+      color: #888;
+      font-size: 12px;
+    }
   </style>
 </head>
 <body>
-  <form action="login.php" method="POST">
-    <h2>Login</h2>
-    <label>Username: <input type="text" name="username" required></label><br><br>
-    <label>Password: <input type="password" name="password" required></label><br><br>
-    <button type="submit">Login</button>
-  </form>
+  <div class="login-container">
+    <h2>Hospital Login</h2>
+    <form action="login.php" method="POST">
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" required>
+
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required>
+
+      <button type="submit">Login</button>
+    </form>
+    <div class="footer">Powered by YourHospital System</div>
+  </div>
 </body>
 </html>
